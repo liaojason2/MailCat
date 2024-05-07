@@ -10,7 +10,7 @@
     },
     "008": {
         "name": "華南銀行",
-        "label_name": "銀行/008 華南銀行",
+        "label_name": "Life/金融/華南銀行",
         "domain_name": "hncb",
         "email": [
             "hncb.com.tw"
@@ -26,7 +26,7 @@
     },
     "012": {
         "name": "台北富邦銀行",
-        "label_name": "銀行/012 富邦銀行",
+        "label_name": "Life/金融/臺北富邦銀行",
         "domain_name": "taipeifubon",
         "email": [
             "taipeifubon.com.tw",
@@ -35,7 +35,7 @@
     },
     "013": {
         "name": "國泰世華",
-        "label_name": "銀行/013 國泰世華",
+        "label_name": "Life/金融/國泰世華 KOKO",
         "domain_name": "cathaybk",
         "email": [
             "cathaybk.com.tw",
@@ -61,7 +61,7 @@
     },
     "700": {
         "name": "中華郵政",
-        "label_name": "銀行/700 中華郵政",
+        "label_name": "Life/金融/中華郵政",
         "domain_name": "post",
         "email": [
             "post.gov.tw"
@@ -85,7 +85,7 @@
     },
     "807": {
         "name": "永豐銀行",
-        "label_name": "銀行/807 永豐銀行",
+        "label_name": "Life/金融/永豐銀行",
         "domain_name": "sinopac",
         "email": [
             "sinopac.com",
@@ -95,7 +95,7 @@
     },
     "812": {
         "name": "台新銀行",
-        "label_name": "銀行/812 台新銀行",
+        "label_name": "Life/金融/台新銀行 richart",
         "domain_name": "taishinbank",
         "email": [
             "richart.tw",
@@ -104,7 +104,7 @@
     },
     "822": {
         "name": "中國信託",
-        "label_name": "銀行/822 中國信託",
+        "label_name": "Life/金融/中國信託",
         "domain_name": "ctbcbank",
         "email": [
             "ctbcbank.com"
@@ -120,7 +120,7 @@
     },
     "824": {
         "name": "連線銀行",
-        "label_name": "銀行/824 連線銀行",
+        "label_name": "Life/金融/LINE Bank",
         "domain_name": "linebank",
         "email": [
             "linebank.com.tw"
