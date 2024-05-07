@@ -53,7 +53,7 @@
     },
     "081": {
         "name": "匯豐銀行（臺灣）",
-        "label_name": "Life/金融/匯豐銀行",
+        "label_name": "Life/金融/匯豐銀行 HSBC",
         "domain_name": "hsbc",
         "email": [
             "hsbc.com.tw"
@@ -113,7 +113,7 @@
     "810": {
         "name": "星展銀行（臺灣）",
         "english_name": "DBS Bank (Taiwan)",
-        "label_name": "銀行/810 星展銀行（臺灣）",
+        "label_name": "Life/金融/星展銀行 DBS",
         "domain_name": "dbs",
         "email": [
             "dbs.com"
