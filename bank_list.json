@@ -110,8 +110,8 @@
         ]
     },
     "810": {
-        "name": "星展銀行（臺灣）",
-        "english_name": "DBS Bank (Taiwan)",
+        "name": "星展銀行",
+        "english_name": "DBS Bank",
         "label_name": "Life/金融/星展銀行 DBS",
         "domain_name": "dbs",
         "email": [
