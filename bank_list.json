@@ -108,6 +108,14 @@
             "esunbank.com.tw"
         ]
     },
+    "808": {
+        "name": "玉山銀行",
+        "label_name": "銀行/808 玉山銀行",
+        "domain_name": "esunbank",
+        "email": [
+            "esunbank.com.tw"
+        ]
+    },
     "812": {
         "name": "台新銀行",
         "label_name": "Life/金融/台新銀行 richart",
