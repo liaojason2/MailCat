@@ -1,7 +1,7 @@
 {
     "007": {
         "name": "第一銀行",
-        "label_name": "Life/金融/第一銀行",
+        "label_name": "銀行/007 第一銀行",
         "domain_name": "firstbank",
         "email": [
             "firstbank.com.tw",
@@ -43,6 +43,14 @@
             "mybank.com.tw"
         ]
     },
+    "017": {
+        "name": "兆豐銀行",
+        "label_name": "銀行/017 兆豐銀行",
+        "domain_name": "megabank",
+        "email": [
+            "megabank.com.tw"
+        ]
+    },
     "053": {
         "name": "台中銀行",
         "label_name": "銀行/053 台中銀行",
@@ -57,14 +65,6 @@
         "domain_name": "hsbc",
         "email": [
             "hsbc.com.tw"
-        ]
-    },
-    "397": {
-        "name": "歐付寶",
-        "label_name": "銀行/397 歐付寶",
-        "domain_name": "opay",
-        "email": [
-            "opay.tw"
         ]
     },
     "700": {
@@ -113,7 +113,17 @@
         "label_name": "銀行/808 玉山銀行",
         "domain_name": "esunbank",
         "email": [
-            "esunbank.com.tw"
+            "esunbank.com.tw",
+            "esunbank.com"
+        ]
+    },
+    "810": {
+        "name": "星展銀行",
+        "english_name": "DBS Bank",
+        "label_name": "銀行/810 星展銀行",
+        "domain_name": "dbs",
+        "email": [
+            "dbs.com"
         ]
     },
     "812": {
@@ -164,6 +174,22 @@
         "domain_name": "paypal",
         "email": [
             "paypal.com"
+        ]
+    },
+    "391": {
+        "name": "iPASS MONEY",
+        "label_name": "電子支付/391 iPASS MONEY",
+        "domain_name": "i-pass",
+        "email": [
+            "i-pass.com.tw"
+        ]
+    },
+    "397": {
+        "name": "歐付寶 O'Pay",
+        "label_name": "電子支付/397 歐付寶 O'Pay",
+        "domain_name": "opay",
+        "email": [
+            "opay.tw"
         ]
     }
 }
