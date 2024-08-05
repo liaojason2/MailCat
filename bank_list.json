@@ -1,7 +1,7 @@
 {
     "007": {
         "name": "第一銀行",
-        "label_name": "銀行/007 第一銀行",
+        "label_name": "Life/金融/007 第一銀行",
         "domain_name": "firstbank",
         "email": [
             "firstbank.com.tw",
@@ -102,14 +102,6 @@
     },
     "808": {
         "name": "玉山銀行",
-        "label_name": "Life/金融/玉山銀行",
-        "domain_name": "esunbank",
-        "email": [
-            "esunbank.com.tw"
-        ]
-    },
-    "808": {
-        "name": "玉山銀行",
         "label_name": "銀行/808 玉山銀行",
         "domain_name": "esunbank",
         "email": [
@@ -120,7 +112,7 @@
     "810": {
         "name": "星展銀行",
         "english_name": "DBS Bank",
-        "label_name": "銀行/810 星展銀行",
+        "label_name": "Life/金融/星展銀行 DBS",
         "domain_name": "dbs",
         "email": [
             "dbs.com"
@@ -133,15 +125,6 @@
         "email": [
             "richart.tw",
             "taishinbank.com.tw"
-        ]
-    },
-    "810": {
-        "name": "星展銀行",
-        "english_name": "DBS Bank",
-        "label_name": "Life/金融/星展銀行 DBS",
-        "domain_name": "dbs",
-        "email": [
-            "dbs.com"
         ]
     },
     "822": {
