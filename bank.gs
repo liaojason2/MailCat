@@ -5,11 +5,9 @@ var BankRule_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_
 // --- Settings --- //
 
 // 0. Initial
-var BankList_JSON = GetJSON(BankList_Url); // 1-取得銀行資料 JSON
-var BankRule_JSON = GetJSON(BankRule_Url);
+var BankList_JSON = getFile('bank_list.json') ? getFile('bank_list.json') : GetJSON(BankList_Url); // 1-取得銀行資料 JSON
+var BankRule_JSON = getFile('bank_rule.json') ? getFile('bank_rule.json') : GetJSON(BankRule_Url);
 
-
-// 1. MailLabelManage
 function Bank_Label(){
   for (var bankIndex = 0; bankIndex < BankList_Own.length; bankIndex++) {
     // 01. BankListLabel
@@ -46,6 +44,7 @@ function Bank_AutoRemove(){
   for (var i = 0; i < label_name.length; i++) {
     AutoRemove(delete_days[i], label_name[i]);
   }
+
 }
 
 // 3. 自動封存信件（登入通知、交易通知）
