@@ -1,3 +1,38 @@
+// --- Settings --- //
+var BankList_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_list.json";
+var BankRule_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_rule.json";
+var GCP_project_id = "" // GCP Project ID
+var GCS_bucket_name = "" // Set your desired bucket name
+// --- Settings --- //
+
+function createBucket() {
+  const projectId = GCP_project_id; 
+  const bucketName = GCS_bucket_name; 
+
+  const payload = JSON.stringify({
+    name: bucketName, // The name of your new bucket
+    location: "US", // Set the storage location (e.g., US, ASIA, EUROPE)
+    storageClass: "STANDARD" // Options: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE
+  });
+
+  const options = {
+    method: "POST",
+    contentType: "application/json",
+    headers: {
+      Authorization: "Bearer " + ScriptApp.getOAuthToken()
+    },
+    payload: payload
+  };
+
+  try {
+    const response = UrlFetchApp.fetch(url, options);
+    const data = JSON.parse(response.getContentText());
+    console.log(data.name); // Output only the bucket name
+  } catch (error) {
+    console.error("Error creating bucket:", error);
+  }
+}
+
 function getFile(file) {
   const bucketName = 'bank_info_bucket';
   const fileName = file;
