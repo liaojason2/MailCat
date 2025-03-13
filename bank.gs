@@ -5,8 +5,8 @@ var BankRule_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_
 // --- Settings --- //
 
 // 0. Initial
-var BankList_JSON = getFile('bank_list.json') ? getFile('bank_list.json') : GetJSON(BankList_Url); // 1-取得銀行資料 JSON
-var BankRule_JSON = getFile('bank_rule.json') ? getFile('bank_rule.json') : GetJSON(BankRule_Url);
+var BankList_JSON = getFile('bank_list.json') || GetJSON(BankList_Url); // 1-取得銀行資料 JSON
+var BankRule_JSON = getFile('bank_rule.json') || GetJSON(BankRule_Url);
 
 function Bank_Label(){
   for (var bankIndex = 0; bankIndex < BankList_Own.length; bankIndex++) {
