@@ -2,11 +2,20 @@
 var BankList_Own = []
 var BankList_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_list.json";
 var BankRule_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_rule.json";
+var USE_GCS = false
+var GCS_bucket_name = ""
 // --- Settings --- //
 
 // 0. Initial
-var BankList_JSON = getFile('bank_list.json') || GetJSON(BankList_Url); // 1-取得銀行資料 JSON
-var BankRule_JSON = getFile('bank_rule.json') || GetJSON(BankRule_Url);
+var BankList_JSON = ''
+var BankRule_JSON = ''
+if (USE_GCS) {
+  BankList_JSON = getBucketFile(GCS_bucket_name, 'bank_list.json')
+  BankRule_JSON = getBucketFile(GCS_bucket_name, 'bank_rule.json')
+} else {
+  BankList_JSON = GetJSON(BankList_Url)
+  BankRule_JSON = GetJSON(BankRule_Url)
+}
 
 function Bank_Label(){
   for (var bankIndex = 0; bankIndex < BankList_Own.length; bankIndex++) {

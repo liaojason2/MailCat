@@ -13,37 +13,24 @@ function GetJSON(aUrl) {
   }
 }
 
-function getFile(file) {
-  const bucketName = 'bank_info_bucket';
-  const fileName = file;
-
-  const blob = getBucketFile_(bucketName, fileName);
-
-  if (blob) {
-    const jsonData = JSON.parse(blob.getDataAsString()); // Convert Blob to JSON
-    return jsonData;
-  } else {
-    console.warn("Failed to retrieve the file.");
-    return null;
-  }
-}
-
-
-
-function getBucketFile_(BUCKET_NAME, OBJECT_NAME) {
+function getBucketFile(BUCKET_NAME, OBJECT_NAME) {
   const url = `https://storage.googleapis.com/storage/v1/b/${BUCKET_NAME}/o/${encodeURIComponent(OBJECT_NAME)}?alt=media`;
-  try {
-    const response = UrlFetchApp.fetch(url, {
-      method: 'GET',
-      headers: {
-        "Authorization": "Bearer " + ScriptApp.getOAuthToken()
-      }}
-    );
-    return response.getBlob(); // Convert response to Blob
-  } catch (error) {
-    console.warn('Error getting file:', error.toString());
-    return null;
-  }
+    try {
+      const response = UrlFetchApp.fetch(url, {
+        method: 'GET',
+        headers: {
+          "Authorization": "Bearer " + ScriptApp.getOAuthToken()
+        }}
+      );
+      const blob = response.getBlob()
+      const file = JSON.parse(blob.getDataAsString()); // Convert response to Blob
+      Logger.log("+ 1. 資料取得成功（%s）", OBJECT_NAME);
+      return file 
+    } 
+    catch (err) {
+      Logger.warn("- 1. 資料取得失敗: error.toString()");
+      return 0;
+    }
 }
 
 // M2-檢查標籤
