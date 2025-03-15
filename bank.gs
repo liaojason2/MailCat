@@ -74,9 +74,10 @@ function Bank_AutoSave(){
 }
 
 // 5. 在 Google Cloud Storage 建立 Bucket 
-function CreateGCSBucket(){
+function Bucket_CreateBucket(){
   CreateBucket(GCP_project_id, GCS_bucket_name)
 }
+
 // 6. 更新銀行規則至 bucket 內容
 function Bucket_UpdateBankInfo(){
   var bank_list = UrlFetchApp.fetch(BankList_Url);
