@@ -11,8 +11,8 @@ var GCS_bucket_name = ""
 var BankList_JSON = ''
 var BankRule_JSON = ''
 if (USE_GCS) {
-  BankList_JSON = getBucketFile(GCS_bucket_name, 'bank_list.json')
-  BankRule_JSON = getBucketFile(GCS_bucket_name, 'bank_rule.json')
+  BankList_JSON = GetBucketFile(GCS_bucket_name, 'bank_list.json')
+  BankRule_JSON = GetBucketFile(GCS_bucket_name, 'bank_rule.json')
 } else {
   BankList_JSON = GetJSON(BankList_Url)
   BankRule_JSON = GetJSON(BankRule_Url)

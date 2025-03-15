@@ -13,8 +13,8 @@ function GetJSON(aUrl) {
   }
 }
 
-function getBucketFile(BUCKET_NAME, OBJECT_NAME) {
-  const url = `https://storage.googleapis.com/storage/v1/b/${BUCKET_NAME}/o/${encodeURIComponent(OBJECT_NAME)}?alt=media`;
+function GetBucketFile(bucket_name, file_name) {
+  const url = `https://storage.googleapis.com/storage/v1/b/${bucket_name}/o/${encodeURIComponent(file_name)}?alt=media`;
     try {
       const response = UrlFetchApp.fetch(url, {
         method: 'GET',
@@ -23,8 +23,8 @@ function getBucketFile(BUCKET_NAME, OBJECT_NAME) {
         }}
       );
       const blob = response.getBlob()
-      const file = JSON.parse(blob.getDataAsString()); // Convert response to Blob
-      Logger.log("+ 1. 資料取得成功（%s）", OBJECT_NAME);
+      const file = JSON.parse(blob.getDataAsString());
+      Logger.log("+ 1. 資料取得成功（%s）", file_name);
       return file 
     } 
     catch (err) {
