@@ -7,12 +7,10 @@ function getAuthHeaders_() {
 
 // B1-在 Google Cloud Storage 建立 Bucket
 function CreateBucket(GCP_project_id, GCS_bucket_name) {
-  const projectId = GCP_project_id; 
-  const bucketName = GCS_bucket_name; 
-  const url = "https://storage.googleapis.com/storage/v1/b?project=" + projectId;
+  const url = "https://storage.googleapis.com/storage/v1/b?project=" + GCP_project_id;
 
   const payload = JSON.stringify({
-    name: bucketName, // The name of your new bucket
+    name: GCS_bucket_name, // The name of your new bucket
     location: "US", // Set the storage location (e.g., US, ASIA, EUROPE)
     storageClass: "STANDARD" // Options: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE
   });
