@@ -18,6 +18,7 @@ if (USE_GCS) {
   BankRule_JSON = GetJSON(BankRule_Url)
 }
 
+// 1. MailLabelManage
 function Bank_Label(){
   for (var bankIndex = 0; bankIndex < BankList_Own.length; bankIndex++) {
     // 01. BankListLabel
