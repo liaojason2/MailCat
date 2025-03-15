@@ -28,7 +28,7 @@ function getBucketFile(BUCKET_NAME, OBJECT_NAME) {
       return file 
     } 
     catch (err) {
-      Logger.warn("- 1. 資料取得失敗: error.toString()");
+      Logger.log("+ 1. 資料取得失敗（%s）", error.toString());
       return 0;
     }
 }
