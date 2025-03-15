@@ -1,4 +1,6 @@
-// M1-取得資料 JSON
+// M1-取得銀行規則資料
+
+// 從 GitHub 取得資料
 function GetJSON(aUrl) {
   var response = UrlFetchApp.fetch(aUrl);
   response.getResponseCode
@@ -13,6 +15,7 @@ function GetJSON(aUrl) {
   }
 }
 
+// 從 Google Cloud Storage 的 Bucket 取得資料
 function GetBucketFile(bucket_name, file_name) {
   const url = `https://storage.googleapis.com/storage/v1/b/${bucket_name}/o/${encodeURIComponent(file_name)}?alt=media`;
     try {
