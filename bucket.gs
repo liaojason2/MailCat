@@ -25,7 +25,7 @@ function CreateBucket(GCP_project_id, GCS_bucket_name) {
   try {
     const response = UrlFetchApp.fetch(url, options);
     const data = JSON.parse(response.getContentText());
-    Logger.log(data.name); // Output only the bucket name
+    Logger.log(`已成功建立 bucket: ${data.name}`); // Output only the bucket name
   } catch (error) {
     console.error("Error creating bucket:", error);
   }
@@ -44,7 +44,7 @@ function UpdateBankInfo(content, fileName) {
   try {
     const response = UrlFetchApp.fetch(url, options);
     const data = JSON.parse(response.getContentText());
-    Logger.log(`File uploaded: ${data.bucket}/${data.name}`);
+    Logger.log(`已成功更新: ${data.bucket}/${data.name}`);
   } catch (error) {
     console.error("Error uploading file:", error);
   }
