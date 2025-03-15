@@ -1,3 +1,4 @@
+// 取得 Google Cloud Storage OAuth token
 function getAuthHeaders_() {
   return {
     Authorization: "Bearer " + ScriptApp.getOAuthToken()
@@ -49,4 +50,3 @@ function UpdateBankInfo(content, fileName) {
     console.error("Error uploading file:", error);
   }
 }
-
