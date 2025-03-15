@@ -77,3 +77,11 @@ function Bank_AutoSave(){
 function CreateGCSBucket(){
   CreateBucket(GCP_project_id, GCS_bucket_name)
 }
+// 6. 更新銀行規則至 bucket 內容
+function Bucket_UpdateBankInfo(){
+  var bank_list = UrlFetchApp.fetch(BankList_Url);
+  UpdateBankInfo(bank_list.getContentText(), "bank_list.json");
+
+  var bank_rule = UrlFetchApp.fetch(BankRule_Url);
+  UpdateBankInfo(bank_rule.getContentText(), "bank_rule.json");
+}
