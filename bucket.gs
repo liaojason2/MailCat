@@ -45,7 +45,8 @@ function UpdateBankInfo(content, fileName) {
 
   try {
     const response = UrlFetchApp.fetch(url, options);
-    console.log("File uploaded:", response.getContentText()); // Output file name
+    const data = JSON.parse(response.getContentText());
+    console.log(`File uploaded: ${data.bucket}/${data.name}`);
   } catch (error) {
     console.error("Error uploading file:", error);
   }
