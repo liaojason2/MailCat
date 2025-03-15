@@ -5,7 +5,11 @@ var GCP_project_id = "" // GCP Project ID
 var GCS_bucket_name = "" // Set your desired bucket name
 // --- Settings --- //
 
-function createBucket() {
+function getAuthHeaders_() {
+  return {
+    Authorization: "Bearer " + ScriptApp.getOAuthToken()
+  };
+}
   const projectId = GCP_project_id; 
   const bucketName = GCS_bucket_name; 
 
@@ -18,9 +22,7 @@ function createBucket() {
   const options = {
     method: "POST",
     contentType: "application/json",
-    headers: {
-      Authorization: "Bearer " + ScriptApp.getOAuthToken()
-    },
+    headers: getAuthHeaders_(),
     payload: payload
   };
 
