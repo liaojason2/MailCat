@@ -3,6 +3,7 @@ var BankList_Own = []
 var BankList_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_list.json";
 var BankRule_Url = "https://raw.githubusercontent.com/HeiTang/MailCat/main/bank_rule.json";
 var USE_GCS = false
+var GCP_project_id = ""
 var GCS_bucket_name = ""
 // --- Settings --- //
 
@@ -70,4 +71,9 @@ function Bank_AutoSave(){
   var label_name = BankRule_JSON[2]['label_name'];
   var rule = Utilities.formatString("has:attachment is:important label:%s", label_name);
   AutoSave(folder_name, label_name, rule);
+}
+
+// 5. 在 Google Cloud Storage 建立 Bucket 
+function CreateGCSBucket(){
+  CreateBucket(GCP_project_id, GCS_bucket_name)
 }

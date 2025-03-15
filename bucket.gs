@@ -10,8 +10,12 @@ function getAuthHeaders_() {
     Authorization: "Bearer " + ScriptApp.getOAuthToken()
   };
 }
+
+// B1-在 Google Cloud Storage 建立 Bucket
+function CreateBucket(GCP_project_id, GCS_bucket_name) {
   const projectId = GCP_project_id; 
   const bucketName = GCS_bucket_name; 
+  const url = "https://storage.googleapis.com/storage/v1/b?project=" + projectId;
 
   const payload = JSON.stringify({
     name: bucketName, // The name of your new bucket
